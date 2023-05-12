@@ -1,0 +1,43 @@
+.wrapper {
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100000000;
+}
+
+.flex {
+  width: 1220px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo {
+  background-image: url(./assets/logo.svg);
+  width: 140px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav p {
+  font: 500 16px 'Inter';
+  line-height: 20px;
+  color: #232134;
+}
+
+.nav a:hover {
+  color: #5e96fc;
+}
+
+.nav p:not(:last-child) {
+  margin-right: 30px;
+}

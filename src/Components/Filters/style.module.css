@@ -1,0 +1,50 @@
+.wrapper {
+  width: 33%;
+  background: #ffffff;
+  border: 1px solid #eaebed;
+  border-radius: 12px;
+  height: max-content;
+  padding: 25px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 20px;
+}
+
+.flex h2 {
+  font: 700 20px 'Inter';
+  color: #232134;
+}
+
+.flex p {
+  font: 500 14px 'Inter';
+  color: #acadb9;
+}
+
+.industry,
+.salary,
+.btn {
+  margin-top: 20px;
+}
+
+.industry h3,
+.salary h3 {
+  font: 700 16px 'Inter';
+  line-height: 19px;
+  color: #232134;
+  margin-bottom: 10px;
+}
+
+.salary .selectors {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.btn {
+  width: 100%;
+}

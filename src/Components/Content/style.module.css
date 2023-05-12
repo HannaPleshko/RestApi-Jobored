@@ -1,0 +1,62 @@
+.wrapper {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #eaebed;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.wrapper:hover {
+  border-color: #5e95fc8e;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.content {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vacancy-h {
+  font: 600 24px 'Inter';
+  line-height: 24px;
+  color: #5e96fc;
+}
+
+.flex {
+  display: flex;
+}
+
+.salary {
+  font: 600 16px 'Inter';
+  line-height: 20px;
+  color: #232134;
+  margin-right: 30px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+}
+
+.location .img {
+  background-image: url(./assets/Location.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+}
+
+.dsave {
+  background-image: url(./assets/dsave.svg);
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  background-size: contain;
+}

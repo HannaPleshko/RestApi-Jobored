@@ -1,0 +1,128 @@
+[
+  {
+    "vacancy": "JavaScript Developer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Минск"
+  },
+  {
+    "vacancy": "Python Developer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гродно"
+  },
+  {
+    "vacancy": "Java Developer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Брест"
+  },
+  {
+    "vacancy": "Frontend Developer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Могилев"
+  },
+  {
+    "vacancy": "Data Scientist",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Витебск"
+  },
+  {
+    "vacancy": "UI/UX Designer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гомель"
+  },
+  {
+    "vacancy": "Software Engineer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Минск"
+  },
+  {
+    "vacancy": "Full Stack Developer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гродно"
+  },
+  {
+    "vacancy": "PHP Developer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Брест"
+  },
+  {
+    "vacancy": "Backend Developer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Могилев"
+  },
+  {
+    "vacancy": "DevOps Engineer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Витебск"
+  },
+  {
+    "vacancy": "Mobile App Developer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гомель"
+  },
+  {
+    "vacancy": "QA Engineer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Минск"
+  },
+  {
+    "vacancy": "System Administrator",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гродно"
+  },
+  {
+    "vacancy": "UI Designer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Витебск"
+  },
+  {
+    "vacancy": "Game Developer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гомель"
+  },
+  {
+    "vacancy": "IT Project Manager",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Минск"
+  },
+  {
+    "vacancy": "Embedded Systems Engineer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гродно"
+  },
+  {
+    "vacancy": "Frontend Developer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Брест"
+  },
+  {
+    "vacancy": "Software Tester",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Могилев"
+  },
+  {
+    "vacancy": "Cloud Architect",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Витебск"
+  }
+]
