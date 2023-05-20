@@ -2,6 +2,7 @@ import React from 'react';
 import style from './style.module.css';
 import { NativeSelect, Input, Button } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons-react';
+import storage from '../../storage/category.json';
 
 function Filters() {
   return (
@@ -13,7 +14,7 @@ function Filters() {
 
       <div className={style['industry']}>
         <h3>Отрасль</h3>
-        <NativeSelect size="lg" placeholder="Выберете отрасль" data={['React', 'Angular', 'Svelte', 'Vue']} rightSection={<IconChevronDown />} />
+        <NativeSelect size="lg" placeholder="Выберете отрасль" data={storage.map(el => el.category)} rightSection={<IconChevronDown />} />
       </div>
 
       <div className={style['salary']}>

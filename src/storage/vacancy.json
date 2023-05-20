@@ -1,0 +1,250 @@
+[
+  {
+    "id": 1,
+    "vacancy": "JavaScript Developer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Минск",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 2,
+    "vacancy": "Python Developer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гродно",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 3,
+    "vacancy": "Java Developer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Брест",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 4,
+    "vacancy": "Frontend Developer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Могилев",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 5,
+    "vacancy": "Data Scientist",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Витебск",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 6,
+    "vacancy": "UI/UX Designer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гомель",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 7,
+    "vacancy": "Software Engineer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Минск",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 8,
+    "vacancy": "Full Stack Developer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гродно",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 9,
+    "vacancy": "PHP Developer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Брест",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 10,
+    "vacancy": "Backend Developer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Могилев",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 11,
+    "vacancy": "DevOps Engineer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Витебск",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 12,
+    "vacancy": "Mobile App Developer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гомель",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 13,
+    "vacancy": "QA Engineer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Минск",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 14,
+    "vacancy": "System Administrator",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гродно",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 15,
+    "vacancy": "UI Designer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Витебск",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 16,
+    "vacancy": "Game Developer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гомель",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 17,
+    "vacancy": "IT Project Manager",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Минск",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 18,
+    "vacancy": "Embedded Systems Engineer",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гродно",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 19,
+    "vacancy": "Frontend Developer",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Брест",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 20,
+    "vacancy": "Software Tester",
+    "salary": "з/п от 50000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Могилев",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 21,
+    "vacancy": "Cloud Architect",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Витебск",
+    "category": "Информационные технологии"
+  },
+  {
+    "id": 22,
+    "vacancy": "Финансовый аналитик",
+    "salary": "з/п от 60000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Минск",
+    "category": "Финансы и бухгалтерия"
+  },
+  {
+    "id": 23,
+    "vacancy": "Бухгалтер",
+    "salary": "з/п от 45000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гродно",
+    "category": "Финансы и бухгалтерия"
+  },
+  {
+    "id": 24,
+    "vacancy": "Финансовый менеджер",
+    "salary": "з/п от 70000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Брест",
+    "category": "Финансы и бухгалтерия"
+  },
+  {
+    "id": 25,
+    "vacancy": "Медицинская сестра",
+    "salary": "з/п от 30000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Могилев",
+    "category": "Здравоохранение и медицина"
+  },
+  {
+    "id": 26,
+    "vacancy": "Врач-терапевт",
+    "salary": "з/п от 80000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Витебск",
+    "category": "Здравоохранение и медицина"
+  },
+  {
+    "id": 27,
+    "vacancy": "Учитель математики",
+    "salary": "з/п от 40000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Минск",
+    "category": "Образование"
+  },
+  {
+    "id": 28,
+    "vacancy": "Преподаватель английского языка",
+    "salary": "з/п от 45000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Гродно",
+    "category": "Образование"
+  },
+  {
+    "id": 29,
+    "vacancy": "Инженер-электрик",
+    "salary": "з/п от 60000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Брест",
+    "category": "Инженерные специальности"
+  },
+  {
+    "id": 30,
+    "vacancy": "Инженер-механик",
+    "salary": "з/п от 65000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Могилев",
+    "category": "Инженерные специальности"
+  },
+  {
+    "id": 31,
+    "vacancy": "Архитектор",
+    "salary": "з/п от 80000 rub",
+    "workday": "Полный рабочий день",
+    "city": "Витебск",
+    "category": "Инженерные специальности"
+  }
+]
