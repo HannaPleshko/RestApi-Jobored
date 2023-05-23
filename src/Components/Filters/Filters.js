@@ -4,7 +4,9 @@ import { NativeSelect, Input, Button } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons-react';
 import storage from '../../storage/category.json';
 
-function Filters() {
+function Filters({ setIndustry }) {
+
+
   return (
     <div className={style['wrapper']}>
       <div className={style['flex']}>
@@ -14,7 +16,7 @@ function Filters() {
 
       <div className={style['industry']}>
         <h3>Отрасль</h3>
-        <NativeSelect size="lg" placeholder="Выберете отрасль" data={storage.map(el => el.category)} rightSection={<IconChevronDown />} />
+        <NativeSelect onClick={(e) => setIndustry(e.target)} size="lg" placeholder="Выберете отрасль..." data={storage.map(el => el.category)} rightSection={<IconChevronDown />} />
       </div>
 
       <div className={style['salary']}>
