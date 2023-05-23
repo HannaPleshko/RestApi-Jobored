@@ -7,22 +7,22 @@ import Filters from '../../Components/Filters/Filters';
 
 function HomePage() {
   const [searchString, setSearchString] = useState('');
-  const [industry, setIndustry] = useState('Выберете отрасль...');
+  const [expression, setExpression] = useState('Информационные технологии');
 
   useEffect(() => {
-    console.log(industry);
-  }, [industry])
+    console.log(expression);
+  }, [expression])
 
   return (
     <div className={style['wrapper']}>
       <Header />
 
       <div className={style['preview']}>
-        <Filters setIndustry={setIndustry} />
+        <Filters setExpression={setExpression} />
 
         <div className={style['content']}>
           <Search setSearchString={setSearchString} />
-          <List searchString={searchString} />
+          <List expression={expression} searchString={searchString} />
         </div>
       </div>
     </div>

@@ -3,15 +3,16 @@ import { Pagination } from '@mantine/core';
 import Item from './Item';
 import storage from '../../storage/vacancy.json';
 
-function List({ searchString }) {
+function List({ searchString, expression }) {
   const [list, setList] = useState(storage);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSizeRef = useRef(4);
 
   const filterVacancy = () => {
-    if (!searchString) return storage;
-    return storage.filter(({ vacancy }) =>
-      vacancy.toLowerCase().includes(searchString.toLowerCase())
+    if (!searchString && !expression.industry) return storage;
+    return storage.filter(({ vacancy, category }) =>
+      vacancy.toLowerCase().includes(searchString.toLowerCase()) &&
+      (!expression.industry || category === expression.industry)
     );
   };
 
@@ -22,20 +23,25 @@ function List({ searchString }) {
 
   useEffect(() => {
     setList(filterVacancy());
-    setCurrentPage(1)
   }, [searchString]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [list, searchString, expression]);
 
   return (
     <div>
       {paginatedList.map((el, index) => (
         <Item key={index} vacancyItem={el} />
       ))}
+
       <Pagination
         total={Math.ceil(list.length / pageSizeRef.current)}
-        value={currentPage}   
+        value={currentPage}
         onChange={(page) => setCurrentPage(page)}
         position="center"
       />
+
     </div>
   );
 }

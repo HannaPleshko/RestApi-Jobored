@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './style.module.css';
 import { NativeSelect, Input, Button } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons-react';
 import storage from '../../storage/category.json';
 
-function Filters({ setIndustry }) {
+function Filters({ setExpression }) {
+  const [industry, setIndustry] = useState('Выберете отрасль...');
 
+  function handleApplyFilters() {
+    setExpression({ industry })
+  }
 
   return (
     <div className={style['wrapper']}>
@@ -16,7 +20,13 @@ function Filters({ setIndustry }) {
 
       <div className={style['industry']}>
         <h3>Отрасль</h3>
-        <NativeSelect onClick={(e) => setIndustry(e.target)} size="lg" placeholder="Выберете отрасль..." data={storage.map(el => el.category)} rightSection={<IconChevronDown />} />
+        <NativeSelect
+          size="lg"
+          placeholder="Выберете отрасль"
+          data={storage.map((el) => el.category)}
+          onChange={(event) => setIndustry(event.currentTarget.value)}
+          rightSection={<IconChevronDown />}
+        />
       </div>
 
       <div className={style['salary']}>
@@ -28,7 +38,9 @@ function Filters({ setIndustry }) {
         </div>
       </div>
 
-      <Button className={style['btn']} size="lg">
+      <Button
+        onClick={handleApplyFilters}
+        className={style['btn']} size="lg">
         Применить
       </Button>
     </div>
