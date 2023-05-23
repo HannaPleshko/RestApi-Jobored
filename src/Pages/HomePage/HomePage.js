@@ -7,7 +7,7 @@ import Filters from '../../Components/Filters/Filters';
 
 function HomePage() {
   const [searchString, setSearchString] = useState('');
-  const [expression, setExpression] = useState('Информационные технологии');
+  const [expression, setExpression] = useState({});
 
   useEffect(() => {
     console.log(expression);

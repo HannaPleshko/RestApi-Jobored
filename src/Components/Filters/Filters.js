@@ -1,40 +1,55 @@
 import React, { useState } from 'react';
 import style from './style.module.css';
-import { NativeSelect, Input, Button } from '@mantine/core';
+import { Input, Button } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons-react';
 import storage from '../../storage/category.json';
 
 function Filters({ setExpression }) {
-  const [industry, setIndustry] = useState('Выберите отрасль...');
+  const [navigation, setNavigation] = useState({});
+
+  function changeFiltersState(event) {
+    setNavigation({ ...navigation, [event.target.name]: event.currentTarget.value });
+  }
 
   return (
     <div className={style.wrapper}>
       <div className={style.flex}>
         <h2>Фильтры</h2>
-        <p>Сбросить все</p>
+        <p onClick={() => setExpression({})}>Сбросить все</p>
       </div>
 
       <div className={style.industry}>
         <h3>Отрасль</h3>
-        <NativeSelect
+        <Input
           size="lg"
-          placeholder="Выберите отрасль"
-          data={storage.map((el) => el.category)}
-          onChange={(event) => setIndustry(event.currentTarget.value)}
+          name="industry"
+          component="select"
+          onChange={changeFiltersState}
           rightSection={<IconChevronDown />}
-        />
+        >
+          <option>Выберете отрасль</option>
+          {storage.map((el, index) => (
+            <option key={index}>{el.category}</option>
+          ))}
+        </Input>
       </div>
 
       <div className={style.salary}>
         <h3>Оклад</h3>
 
         <div className={style.selectors}>
-          <Input size="lg" className={style['search-inp']} placeholder="От" />
+          <Input
+            size="lg"
+            className={style['search-inp']}
+            placeholder="От"
+            name="salaryFrom"
+            onChange={changeFiltersState}
+          />
           <Input size="lg" className={style['search-inp']} placeholder="До" />
         </div>
       </div>
 
-      <Button onClick={() => setExpression({ industry })} className={style.btn} size="lg">
+      <Button onClick={() => setExpression(navigation)} className={style.btn} size="lg">
         Применить
       </Button>
     </div>

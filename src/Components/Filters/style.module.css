@@ -24,6 +24,11 @@
   color: #acadb9;
 }
 
+.flex p:hover {
+  text-decoration: underline;
+  color: #9899a0;
+}
+
 .industry,
 .salary,
 .btn {
