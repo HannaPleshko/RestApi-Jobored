@@ -1,0 +1,48 @@
+.wrapper {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #eaebed;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.wrapper:hover {
+    border-color: #5e95fc8e;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.content {
+    width: 600px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.vacancy-h {
+    font: 600 24px 'Inter';
+    line-height: 24px;
+    color: #5e96fc;
+}
+
+.flex {
+    display: flex;
+}
+
+.salary {
+    font: 600 16px 'Inter';
+    line-height: 20px;
+    color: #232134;
+    margin-right: 30px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+}
+
