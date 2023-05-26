@@ -8,14 +8,26 @@ function Filters({ setExpression }) {
   const [navigation, setNavigation] = useState({});
 
   function changeFiltersState(event) {
-    setNavigation({ ...navigation, [event.target.name]: event.currentTarget.value });
+    if (event.target.value === 'default') setNavigation({ ...navigation, [event.target.name]: '' });
+    else setNavigation({ ...navigation, [event.target.name]: event.target.value });
   }
+
+  function saveFilter() {
+    setExpression(navigation);
+  }
+
+  function setDefault() {
+    setExpression({})
+  setNavigation({ industry: 'default' });
+  }
+
+
 
   return (
     <div className={style.wrapper}>
       <div className={style.flex}>
         <h2>Фильтры</h2>
-        <p onClick={() => setExpression({})}>Сбросить все</p>
+        <p onClick={setDefault}>Сбросить все</p>
       </div>
 
       <div className={style.industry}>
@@ -24,12 +36,13 @@ function Filters({ setExpression }) {
           size="lg"
           name="industry"
           component="select"
+          value={navigation.industry || 'default'}
           onChange={changeFiltersState}
           rightSection={<IconChevronDown />}
         >
-          <option>Выберете отрасль</option>
+          <option value="default">Выберете отрасль</option>
           {storage.map((el, index) => (
-            <option key={index}>{el.category}</option>
+            <option key={index} value={el.category}>{el.category}</option>
           ))}
         </Input>
       </div>
@@ -49,7 +62,7 @@ function Filters({ setExpression }) {
         </div>
       </div>
 
-      <Button onClick={() => setExpression(navigation)} className={style.btn} size="lg">
+      <Button onClick={saveFilter} className={style.btn} size="lg">
         Применить
       </Button>
     </div>
