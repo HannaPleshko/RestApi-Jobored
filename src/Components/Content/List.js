@@ -4,38 +4,46 @@ import Item from './Item';
 import storage from '../../storage/vacancy.json';
 
 function List({ searchString, expression }) {
-  const pageSizeRef = useRef(4);
+  const pageSize = 4;
   const [currentPage, setCurrentPage] = useState(1);
-  const [list, setList] = useState(storage);
+  const [filteredStorage, setFilteredStorage] = useState(storage);
 
   const filterVacancy = useCallback(() => {
-    if (!searchString && expression.industry == 'default' && expression.salaryFrom === '' && expression.salaryTo === '') return storage;
+    if (!searchString && expression.industry === 'default' && !expression.salaryFrom && !expression.salaryTo) {
+      return storage;
+    }
 
     return storage.filter(({ vacancy, category, salary }) => {
       const filterValueTo = parseInt(expression.salaryTo);
       const filterSalary = parseInt(salary.split(' ')[2]);
       const filterValueFrom = parseInt(expression.salaryFrom);
 
-      return vacancy.toLowerCase().includes(searchString.toLowerCase()) &&
-        (!expression.industry || category === expression.industry) &&
-        (!expression.salaryFrom || (filterSalary && filterSalary >= filterValueFrom)) &&
-        (!expression.salaryTo || (filterSalary && filterSalary <= filterValueTo))
+      return (
+        vacancy.toLowerCase().includes(searchString.toLowerCase()) &&
+        (expression.industry === 'default' || category === expression.industry) &&
+        (!expression.salaryFrom || (filterSalary >= filterValueFrom)) &&
+        (!expression.salaryTo || (filterSalary <= filterValueTo))
+      );
     });
   }, [searchString, expression]);
 
   useEffect(() => {
-    setList(filterVacancy());
-  }, [filterVacancy]);
+    setFilteredStorage(filterVacancy());
+  }, [searchString, expression]);
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [list, searchString, expression]);
+  }, [filteredStorage, searchString, expression]);
 
   const paginatedList = useMemo(() => {
-    const startIndex = (currentPage - 1) * pageSizeRef.current;
-    const endIndex = startIndex + pageSizeRef.current;
-    return list.slice(startIndex, endIndex);
-  }, [list, currentPage]);
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    return filteredStorage.slice(startIndex, endIndex);
+  }, [filteredStorage, currentPage]);
+
+  const handlePageChange = useCallback((page) => {
+    setCurrentPage(page);
+  }, []);
 
   return (
     <div>
@@ -44,9 +52,9 @@ function List({ searchString, expression }) {
       ))}
 
       <Pagination
-        total={Math.ceil(list.length / pageSizeRef.current)}
+        total={Math.ceil(filteredStorage.length / pageSize)}
         value={currentPage}
-        onChange={(page) => setCurrentPage(page)}
+        onChange={handlePageChange}
         position="center"
       />
     </div>

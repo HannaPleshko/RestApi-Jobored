@@ -17,7 +17,7 @@ function Filters({ setExpression }) {
 
   function setDefault() {
     setNavigation({ industry: 'default', salaryFrom: '', salaryTo: '' });
-    setExpression({});
+    setExpression({ industry: 'default', salaryFrom: '', salaryTo: '' });
   }
 
   return (

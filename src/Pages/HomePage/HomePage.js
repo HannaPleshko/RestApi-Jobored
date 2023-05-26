@@ -7,7 +7,7 @@ import Filters from '../../Components/Filters/Filters';
 
 function HomePage() {
   const [searchString, setSearchString] = useState('');
-  const [expression, setExpression] = useState({});
+  const [expression, setExpression] = useState({ industry: 'default', salaryFrom: '', salaryTo: '' });
 
   useEffect(() => {
     console.log(expression);
