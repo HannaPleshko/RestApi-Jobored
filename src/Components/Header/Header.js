@@ -15,7 +15,7 @@ function Header() {
             <Link to="/">Поиск Вакансий</Link>
           </p>
           <p>
-            <Link to="/save">Избранное</Link>
+            <Link to="/basket">Избранное</Link>
           </p>
         </div>
       </div>

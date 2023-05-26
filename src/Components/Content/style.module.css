@@ -17,6 +17,7 @@
 }
 
 .content {
+  width: 600px;
   height: 90px;
   display: flex;
   flex-direction: column;
@@ -55,6 +56,13 @@
 
 .dsave {
   background-image: url(./assets/dsave.svg);
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  background-size: contain;
+}
+.save {
+  background-image: url(./assets/save.svg);
   background-repeat: no-repeat;
   width: 22px;
   height: 22px;
