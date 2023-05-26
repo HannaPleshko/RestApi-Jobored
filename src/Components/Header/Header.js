@@ -6,7 +6,9 @@ function Header() {
   return (
     <div className={style.wrapper}>
       <div className={style.flex}>
-        <div className={style.logo}></div>
+        <Link to={`/`}>
+          <div className={style.logo}></div>
+        </Link>
 
         <div className={style.nav}>
           <p>

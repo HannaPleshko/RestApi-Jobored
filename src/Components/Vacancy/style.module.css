@@ -1,0 +1,41 @@
+.summary {
+  margin: auto;
+  padding: 24px;
+  width: 773px;
+  background: #ffffff;
+  border: 1px solid #eaebed;
+  border-radius: 12px;
+}
+
+.summary h1 {
+  font: 28px 700 'Inter';
+  color: #232134;
+}
+
+.flex {
+  display: flex;
+  margin: 16px 0;
+}
+
+.flex p:not(:last-child) {
+  margin-right: 33px;
+}
+
+.content {
+  width: 773px;
+  background: #ffffff;
+  border: 1px solid #eaebed;
+  border-radius: 12px;
+  padding: 0 24px 24px;
+  margin: 20px auto 0;
+}
+
+.content h2 {
+  font: 20px 700 'Inter';
+  color: #232134;
+  padding: 24px 0;
+}
+
+.content p::before {
+  content: '✅ ';
+}
