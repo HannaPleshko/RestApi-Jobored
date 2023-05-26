@@ -52,7 +52,7 @@ function Filters({ setExpression }) {
         <div className={style.selectors}>
           <Input
             value={navigation.salaryFrom}
-            type='number'
+            type="number"
             size="lg"
             className={style['search-inp']}
             placeholder="От"
@@ -61,7 +61,7 @@ function Filters({ setExpression }) {
           />
           <Input
             value={navigation.salaryTo}
-            type='number'
+            type="number"
             size="lg"
             className={style['search-inp']}
             placeholder="До"

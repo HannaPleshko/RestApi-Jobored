@@ -4,7 +4,7 @@ import Item from './Item';
 import storage from '../../storage/vacancy.json';
 
 function List({ searchString, expression }) {
-  const pageSize = 4;
+  const pageSize = useRef(4);
   const [currentPage, setCurrentPage] = useState(1);
   const [filteredStorage, setFilteredStorage] = useState(storage);
 
@@ -13,18 +13,13 @@ function List({ searchString, expression }) {
       return storage;
     }
 
-    return storage.filter(({ vacancy, category, salary }) => {
-      const filterValueTo = parseInt(expression.salaryTo);
-      const filterSalary = parseInt(salary.split(' ')[2]);
-      const filterValueFrom = parseInt(expression.salaryFrom);
-
-      return (
+    return storage.filter(
+      ({ vacancy, category, salary }) =>
         vacancy.toLowerCase().includes(searchString.toLowerCase()) &&
         (expression.industry === 'default' || category === expression.industry) &&
-        (!expression.salaryFrom || (filterSalary >= filterValueFrom)) &&
-        (!expression.salaryTo || (filterSalary <= filterValueTo))
-      );
-    });
+        (!expression.salaryFrom || salary.split(' ')[2] >= expression.salaryFrom) &&
+        (!expression.salaryTo || salary.split(' ')[2] <= expression.salaryTo)
+    );
   }, [searchString, expression]);
 
   useEffect(() => {
@@ -36,8 +31,8 @@ function List({ searchString, expression }) {
   }, [filteredStorage, searchString, expression]);
 
   const paginatedList = useMemo(() => {
-    const startIndex = (currentPage - 1) * pageSize;
-    const endIndex = startIndex + pageSize;
+    const startIndex = (currentPage - 1) * pageSize.current;
+    const endIndex = startIndex + pageSize.current;
     return filteredStorage.slice(startIndex, endIndex);
   }, [filteredStorage, currentPage]);
 
@@ -51,12 +46,7 @@ function List({ searchString, expression }) {
         <Item key={index} vacancyItem={el} />
       ))}
 
-      <Pagination
-        total={Math.ceil(filteredStorage.length / pageSize)}
-        value={currentPage}
-        onChange={handlePageChange}
-        position="center"
-      />
+      <Pagination total={Math.ceil(filteredStorage.length / pageSize.current)} value={currentPage} onChange={handlePageChange} position="center" />
     </div>
   );
 }

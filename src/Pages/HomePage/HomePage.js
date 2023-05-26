@@ -11,7 +11,7 @@ function HomePage() {
 
   useEffect(() => {
     console.log(expression);
-  }, [expression])
+  }, [expression]);
 
   return (
     <div className={style.wrapper}>
