@@ -9,11 +9,18 @@ function List({ searchString, expression }) {
   const [list, setList] = useState(storage);
 
   const filterVacancy = useCallback(() => {
-    if (!searchString && !expression.industry) return storage;
-    return storage.filter(({ vacancy, category }) =>
-      vacancy.toLowerCase().includes(searchString.toLowerCase()) &&
-      (!expression.industry || category === expression.industry)
-    );
+    if (!searchString && expression.industry == 'default' && expression.salaryFrom === '' && expression.salaryTo === '') return storage;
+
+    return storage.filter(({ vacancy, category, salary }) => {
+      const filterValueTo = parseInt(expression.salaryTo);
+      const filterSalary = parseInt(salary.split(' ')[2]);
+      const filterValueFrom = parseInt(expression.salaryFrom);
+
+      return vacancy.toLowerCase().includes(searchString.toLowerCase()) &&
+        (!expression.industry || category === expression.industry) &&
+        (!expression.salaryFrom || (filterSalary && filterSalary >= filterValueFrom)) &&
+        (!expression.salaryTo || (filterSalary && filterSalary <= filterValueTo))
+    });
   }, [searchString, expression]);
 
   useEffect(() => {

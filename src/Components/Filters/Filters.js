@@ -5,23 +5,20 @@ import { IconChevronDown } from '@tabler/icons-react';
 import storage from '../../storage/category.json';
 
 function Filters({ setExpression }) {
-  const [navigation, setNavigation] = useState({});
+  const [navigation, setNavigation] = useState({ industry: 'default', salaryFrom: '', salaryTo: '' });
 
   function changeFiltersState(event) {
-    if (event.target.value === 'default') setNavigation({ ...navigation, [event.target.name]: '' });
-    else setNavigation({ ...navigation, [event.target.name]: event.target.value });
-  }
-
-  function saveFilter() {
-    setExpression(navigation);
+    const { name, value } = event.target;
+    setNavigation((prevNavigation) => ({
+      ...prevNavigation,
+      [name]: value === 'default' ? '' : value,
+    }));
   }
 
   function setDefault() {
-    setExpression({})
-  setNavigation({ industry: 'default' });
+    setNavigation({ industry: 'default', salaryFrom: '', salaryTo: '' });
+    setExpression({});
   }
-
-
 
   return (
     <div className={style.wrapper}>
@@ -36,13 +33,15 @@ function Filters({ setExpression }) {
           size="lg"
           name="industry"
           component="select"
-          value={navigation.industry || 'default'}
+          value={navigation.industry}
           onChange={changeFiltersState}
           rightSection={<IconChevronDown />}
         >
-          <option value="default">Выберете отрасль</option>
+          <option value="default">Выберите отрасль</option>
           {storage.map((el, index) => (
-            <option key={index} value={el.category}>{el.category}</option>
+            <option key={index} value={el.category}>
+              {el.category}
+            </option>
           ))}
         </Input>
       </div>
@@ -52,17 +51,27 @@ function Filters({ setExpression }) {
 
         <div className={style.selectors}>
           <Input
+            value={navigation.salaryFrom}
+            type='number'
             size="lg"
             className={style['search-inp']}
             placeholder="От"
             name="salaryFrom"
             onChange={changeFiltersState}
           />
-          <Input size="lg" className={style['search-inp']} placeholder="До" />
+          <Input
+            value={navigation.salaryTo}
+            type='number'
+            size="lg"
+            className={style['search-inp']}
+            placeholder="До"
+            name="salaryTo"
+            onChange={changeFiltersState}
+          />
         </div>
       </div>
 
-      <Button onClick={saveFilter} className={style.btn} size="lg">
+      <Button onClick={() => setExpression(navigation)} className={style.btn} size="lg">
         Применить
       </Button>
     </div>
