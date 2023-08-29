@@ -10,7 +10,7 @@ function VacancyPage() {
   const { id } = useParams();
 
   useEffect(() => {
-    const found = storage.find((item) => item.id == id);
+    const found = storage.find((item) => String(item.id) === id);
     setVacancy(found);
   }, []);
 

@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import style from './style.module.css';
 import { Link } from 'react-router-dom';
 import { IconTrash } from '@tabler/icons-react';
 
 function Item({ vacancyItem, setStorage, storage }) {
-
   const handleSaveToggle = () => {
-    const updatedFavorites = storage.filter(el => el.id != vacancyItem.id)
-    setStorage(updatedFavorites)
+    const updatedFavorites = storage.filter((el) => el.id !== vacancyItem.id);
+    setStorage(updatedFavorites);
     localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
   };
 

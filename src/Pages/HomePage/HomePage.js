@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import List from '../../Components/Content/List';
 import Search from '../../Components/Search/Search';
 import style from './style.module.css';
@@ -8,10 +8,6 @@ import Filters from '../../Components/Filters/Filters';
 function HomePage() {
   const [searchString, setSearchString] = useState('');
   const [expression, setExpression] = useState({ industry: 'default', salaryFrom: '', salaryTo: '' });
-
-  useEffect(() => {
-    console.log(expression);
-  }, [expression]);
 
   return (
     <div className={style.wrapper}>

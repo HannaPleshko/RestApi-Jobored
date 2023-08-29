@@ -4,14 +4,13 @@ import Basket from '../../Components/Basket/Basket';
 import style from './style.module.css';
 
 function BasketPage() {
+  return (
+    <div className={style.wrapper}>
+      <Header />
 
-    return (
-        <div className={style.wrapper}>
-            <Header />
-
-            <Basket />
-        </div>
-    )
+      <Basket />
+    </div>
+  );
 }
 
 export default BasketPage;
