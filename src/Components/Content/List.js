@@ -24,7 +24,7 @@ function List({ searchString, expression }) {
 
   useEffect(() => {
     setFilteredStorage(filterVacancy());
-  }, [searchString, expression]);
+  }, [searchString, expression, filterVacancy]);
 
   useEffect(() => {
     setCurrentPage(1);

@@ -12,7 +12,7 @@ function VacancyPage() {
   useEffect(() => {
     const found = storage.find((item) => String(item.id) === id);
     setVacancy(found);
-  }, []);
+  }, [id]);
 
   return (
     <div className={style.wrapper}>
