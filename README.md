@@ -1,4 +1,4 @@
-# RestApi-Jobored
+# Jobored
 
 RestApi-Jobored is a powerful job search application designed to simplify and streamline the process of finding employment opportunities. This repository contains the frontend codebase for the application, built using JavaScript, Mantine, React, and CSS.
 
